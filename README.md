@@ -1,4 +1,4 @@
-# Welcome to the SpaceXpanse and ROD Documentation
+# Welcome to the SpaceXpanse ROD Documentation
 
 ### All the information will be placed here in a meaningful structured way 
 
