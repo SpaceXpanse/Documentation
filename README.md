@@ -1,4 +1,4 @@
-# Welcome to the SpaceXpanse Multiverse Documentation
+# Welcome to the SpaceXpanse Multiverse documentation
 
 ### All the information will be placed here in a meaningful structured way 
 ##### This is work in progress (WIP).
