@@ -32,6 +32,7 @@ cd googletest
 cmake -G "MSYS Makefiles"
 make
 make install
+ldconfig
 cd ..
 git clone https://github.com/SpaceXpanse/eth-utils.git
 cd eth-utils
@@ -39,7 +40,7 @@ cd eth-utils
 ./configure
 make
 make install
-sudo ldconfig
+ldconfig
 cd ..
 git clone https://github.com/SpaceXpanse/libspex.git
 cd libspex
@@ -49,4 +50,4 @@ patch --merge configure.ac configure_patch.diff
 ./configure
 make -j2
 make install
-sudo ldconfig
+ldconfig
