@@ -27,6 +27,12 @@ cd secp256k1
 make
 make install
 cd ..
+git clone https://github.com/google/googletest
+cd googletest
+cmake .
+make
+sudo make install/strip
+cd ..
 git clone https://github.com/SpaceXpanse/eth-utils.git
 cd eth-utils
 ./autogen.sh
