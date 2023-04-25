@@ -29,7 +29,7 @@ make install
 cd ..
 git clone https://github.com/google/glog.git
 cd glog
-cmake -G "MinGW Makefiles"
+cmake -G "MSYS Makefiles"
 make
 make install
 cd ..
