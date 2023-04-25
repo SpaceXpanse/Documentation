@@ -1,5 +1,5 @@
 pacman -Sy
-pacman -S base-devel git mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake autoconf-archive mingw-w64-x86_64-protobuf mingw-w64-x86_64-gtest mingw-w64-x86_64-gflags mingw-w64-x86_64-zeromq mingw-w64-x86_64-openssl mingw-w64-x86_64-glog mingw-w64-x86_64-lmdb mingw-w64-x86_64-lmdbxx mingw-w64-x86_64-sqlite3 mingw-w64-x86_64-libmicrohttpd libtool mingw-w64-x86_64-autotools wget
+pacman -S git mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake autoconf-archive mingw-w64-x86_64-protobuf mingw-w64-x86_64-gtest mingw-w64-x86_64-gflags mingw-w64-x86_64-zeromq mingw-w64-x86_64-openssl mingw-w64-x86_64-glog mingw-w64-x86_64-lmdb mingw-w64-x86_64-lmdbxx mingw-w64-x86_64-sqlite3 mingw-w64-x86_64-libmicrohttpd libtool mingw-w64-x86_64-autotools wget
 git clone https://github.com/RyuMaster/argtable2.git
 cd argtable2
 cmake . -G"MSYS Makefiles" -DCMAKE_INSTALL_PREFIX=$MINGW_PREFIX
@@ -42,9 +42,11 @@ make install
 cd ..
 git clone https://github.com/SpaceXpanse/libspex.git
 cd libspex
-curl -o configure_patch.diff https://raw.githubusercontent.com/SpaceXpanse/Ddocumentation/main/Code/libspex/Compile-scripts/configure_patch.diff
+curl -o configure_patch.diff https://raw.githubusercontent.com/SpaceXpanse/Documentation/main/Code/libspex/Compile-scripts/configure_patch.diff
+dos2unix -k configure_patch.diff
 patch --merge configure.ac configure_patch.diff
 ./autogen.sh
-./configure
+CXXFLAGS=-Wno-deprecated-declarations ./configure
+sed -i.bak -e "s/\(allow_undefined=\)yes/\1no/" libtool
 make -j2
 make install
