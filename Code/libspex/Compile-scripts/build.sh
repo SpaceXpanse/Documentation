@@ -27,6 +27,12 @@ cd secp256k1
 make
 make install
 cd ..
+git clone https://github.com/google/glog.git
+cd glog
+cmake -G "MinGW Makefiles"
+make
+make install
+cd ..
 git clone https://github.com/SpaceXpanse/eth-utils.git
 cd eth-utils
 ./autogen.sh
