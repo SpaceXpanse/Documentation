@@ -1,5 +1,5 @@
 git clone https://github.com/google/googletest
 cd googletest
-cmake -G "MSYS Makefiles"
+cmake -G "MSYS2 Makefiles" -DBUILD_GMOCK=OFF
 make
-make install
+
