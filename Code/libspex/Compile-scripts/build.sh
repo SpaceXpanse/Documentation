@@ -31,7 +31,7 @@ git clone https://github.com/google/googletest
 cd googletest
 cmake -G "MSYS Makefiles"
 make
-make install/strip
+make install
 cd ..
 git clone https://github.com/SpaceXpanse/eth-utils.git
 cd eth-utils
