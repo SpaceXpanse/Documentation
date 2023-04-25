@@ -1,0 +1,4 @@
+35c35
+< AX_PKG_CHECK_MODULES([JSONCPP], [jsoncpp >= 1.7.5], [])
+---
+> AX_PKG_CHECK_MODULES([JSONCPP], [jsoncpp], [])
