@@ -29,7 +29,7 @@ make install
 cd ..
 git clone https://github.com/google/googletest
 cd googletest
-cmake -G "MSYS Makefiles"
+cmake ..
 make
 make install
 ldconfig
