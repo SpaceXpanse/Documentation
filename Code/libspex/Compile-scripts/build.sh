@@ -18,8 +18,8 @@ make install
 cd dist
 cp -r ./ /home/../mingw64/
 cd ~/
-curl -o /home/../mingw64/lib/pkgconfig/libglog.pc https://raw.githubusercontent.com/spacexpanse/documentation/main/code/libspex/Compile-scripts/libglog.pc
-curl -o /home/../mingw64/lib/pkgconfig/lmdb.pc https://raw.githubusercontent.com/spacexpanse/documentation/main/code/libspex/Compile-scripts/lmdb.pc
+curl -o /home/../mingw64/lib/pkgconfig/libglog.pc https://raw.githubusercontent.com/SpaceXpanse/Ddocumentation/main/Code/libspex/Compile-scripts/libglog.pc
+curl -o /home/../mingw64/lib/pkgconfig/lmdb.pc https://raw.githubusercontent.com/SpaceXpanse/Ddocumentation/main/Code/libspex/Compile-scripts/lmdb.pc
 git clone https://github.com/bitcoin-core/secp256k1.git
 cd secp256k1
 ./autogen.sh
@@ -27,16 +27,16 @@ cd secp256k1
 make
 make install
 cd ..
-git clone https://github.com/xaya/eth-utils.git
+git clone https://github.com/SpaceXpanse/eth-utils.git
 cd eth-utils
 ./autogen.sh
 ./configure
 make
 make install
 cd ..
-git clone https://github.com/xaya/libxayagame.git
-cd libxayagame
-curl -o configure_patch.diff https://raw.githubusercontent.com/spacexpanse/documentation/main/code/libspex/Compile-scripts/configure_patch.diff
+git clone https://github.com/SpaceXpanse/libspex.git
+cd libspex
+curl -o configure_patch.diff https://raw.githubusercontent.com/SpaceXpanse/Ddocumentation/main/Code/libspex/Compile-scripts/configure_patch.diff
 patch --merge configure.ac configure_patch.diff
 ./autogen.sh
 ./configure
