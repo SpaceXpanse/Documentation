@@ -34,6 +34,7 @@ cd eth-utils
 make
 make install
 cd ..
+sudo ldconfig
 git clone https://github.com/SpaceXpanse/libspex.git
 cd libspex
 curl -o configure_patch.diff https://raw.githubusercontent.com/SpaceXpanse/Ddocumentation/main/Code/libspex/Compile-scripts/configure_patch.diff
@@ -42,3 +43,4 @@ patch --merge configure.ac configure_patch.diff
 ./configure
 make -j2
 make install
+sudo ldconfig
