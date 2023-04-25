@@ -29,7 +29,7 @@ make install
 cd ..
 git clone https://github.com/google/googletest
 cd googletest
-cmake .
+cmake -G "MSYS Makefiles"
 make
 make install/strip
 cd ..
