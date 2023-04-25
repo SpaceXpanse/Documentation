@@ -27,20 +27,12 @@ cd secp256k1
 make
 make install
 cd ..
-git clone https://github.com/google/googletest
-cd googletest
-cmake ..
-make
-make install
-ldconfig
-cd ..
 git clone https://github.com/SpaceXpanse/eth-utils.git
 cd eth-utils
 ./autogen.sh
 ./configure
 make
 make install
-ldconfig
 cd ..
 git clone https://github.com/SpaceXpanse/libspex.git
 cd libspex
@@ -50,4 +42,3 @@ patch --merge configure.ac configure_patch.diff
 ./configure
 make -j2
 make install
-ldconfig
