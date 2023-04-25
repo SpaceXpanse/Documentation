@@ -1,6 +1,5 @@
 git clone https://github.com/google/googletest
 cd googletest
-cmake ${GTEST_DIR}
+cmake -G "MSYS Makefiles"
 make
 make install
-ldconfig
