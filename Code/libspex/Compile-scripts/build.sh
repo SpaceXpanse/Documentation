@@ -44,7 +44,8 @@ curl -o configure_patch.diff https://raw.githubusercontent.com/SpaceXpanse/Docum
 dos2unix -k configure_patch.diff
 patch --merge configure.ac configure_patch.diff
 ./autogen.sh
-CXXFLAGS=-Wno-deprecated-declarations ./configure
-sed -i.bak -e "s/\(allow_undefined=\)yes/\1no/" libtool
-make -j2
+# ./configure
+CXXFLAGS=-Wno-deprecated-declarations ./configure 
+#sed -i.bak -e "s/\(allow_undefined=\)yes/\1no/" libtool
+make
 make install
