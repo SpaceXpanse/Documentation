@@ -1,8 +1,5 @@
 pacman -Sy
 pacman -S base-devel git mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake autoconf-archive mingw-w64-x86_64-protobuf mingw-w64-x86_64-gtest mingw-w64-x86_64-gflags mingw-w64-x86_64-zeromq mingw-w64-x86_64-openssl mingw-w64-x86_64-sqlite3 mingw-w64-x86_64-libmicrohttpd libtool mingw-w64-x86_64-autotools wget
-pacman -Sy
-pacman -S mingw-w64-x86_64-glog
-pacman -S mingw-w64-x86_64-lmdb mingw-w64-x86_64-lmdbxx  
 git clone https://github.com/RyuMaster/argtable2.git
 cd argtable2
 cmake . -G"MSYS Makefiles" -DCMAKE_INSTALL_PREFIX=$MINGW_PREFIX
@@ -30,6 +27,8 @@ cd secp256k1
 make
 make install
 cd ..
+pacman -Sy
+pacman -S mingw-w64-x86_64-glog
 git clone https://github.com/SpaceXpanse/eth-utils.git
 cd eth-utils
 ./autogen.sh
@@ -37,6 +36,8 @@ cd eth-utils
 make
 make install
 cd ..
+pacman -Sy
+pacman -S mingw-w64-x86_64-lmdb mingw-w64-x86_64-lmdbxx  
 git clone https://github.com/SpaceXpanse/libspex.git
 cd libspex
 curl -o configure_patch.diff https://raw.githubusercontent.com/SpaceXpanse/Documentation/main/Code/libspex/Compile-scripts/configure_patch.diff
