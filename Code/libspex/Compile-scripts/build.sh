@@ -1,5 +1,8 @@
 pacman -Sy
-pacman -S git mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake autoconf-archive mingw-w64-x86_64-protobuf mingw-w64-x86_64-gtest mingw-w64-x86_64-gflags mingw-w64-x86_64-zeromq mingw-w64-x86_64-openssl mingw-w64-x86_64-glog mingw-w64-x86_64-lmdb mingw-w64-x86_64-lmdbxx mingw-w64-x86_64-sqlite3 mingw-w64-x86_64-libmicrohttpd libtool mingw-w64-x86_64-autotools wget
+pacman -S base-devel git mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake autoconf-archive mingw-w64-x86_64-protobuf mingw-w64-x86_64-gtest mingw-w64-x86_64-gflags mingw-w64-x86_64-zeromq mingw-w64-x86_64-openssl mingw-w64-x86_64-sqlite3 mingw-w64-x86_64-libmicrohttpd libtool mingw-w64-x86_64-autotools wget
+pacman -Sy
+pacman -S mingw-w64-x86_64-glog
+pacman -S mingw-w64-x86_64-lmdb mingw-w64-x86_64-lmdbxx  
 git clone https://github.com/RyuMaster/argtable2.git
 cd argtable2
 cmake . -G"MSYS Makefiles" -DCMAKE_INSTALL_PREFIX=$MINGW_PREFIX
@@ -24,12 +27,6 @@ git clone https://github.com/bitcoin-core/secp256k1.git
 cd secp256k1
 ./autogen.sh
 ./configure --disable-tests --disable-benchmark --enable-module-recovery
-make
-make install
-cd ..
-git clone https://github.com/google/glog.git
-cd glog
-cmake -G "MSYS Makefiles"
 make
 make install
 cd ..
