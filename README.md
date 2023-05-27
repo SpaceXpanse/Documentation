@@ -8,7 +8,7 @@
 * [About the platform](https://github.com/SpaceXpanse/Whitepaper)  
 * [ROD blockchain specification](https://github.com/SpaceXpanse/rod-core-wallet/blob/0.6.8/doc/spacexpanse/SpaceXpanse-ROD-blockchain-specs.pdf "Specification" )  
 * [How to get RODs](https://github.com/SpaceXpanse/Documentation/wiki/How-to-get-RODs)  
-<!-- * [SpaceXpanse Metaverse Simulator](https://github.com/SpaceXpanse/Metaverse/wiki) --> 
+* [SpaceXpanse Metaverse Simulator](https://github.com/SpaceXpanse/Metaverse/wiki)
 
 #### Disclaimer
 
